@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rm501">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
+
+    <!-- Import rm501 urdf file -->
+    <xacro:include filename="$(find rm501_description)/urdf/rm501.urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="rm501.ros2_control.xacro" />
+
+    <xacro:rm501_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)" ros2_control_hardware_type="$(arg ros2_control_hardware_type)"/>
+
+</robot>

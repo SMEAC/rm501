@@ -1,0 +1,8 @@
+# Default initial positions for rm501's ros2_control fake system
+
+initial_positions:
+  rm501_joint1: 0
+  rm501_joint2: 0
+  rm501_joint3: 0
+  rm501_joint4: 0
+  rm501_joint5: 0
